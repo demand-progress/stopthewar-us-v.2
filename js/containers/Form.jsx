@@ -20,7 +20,7 @@ class Form extends Component {
     
     componentWillMount () {
       this.setState({
-        emailAction: window.location.href.indexOf('email=call') !== -1
+        emailAction: window.location.href.indexOf('email=call') > -1
       })
     }
 
@@ -54,7 +54,8 @@ class Form extends Component {
     
     render() {
         let form = null;
-        
+        const { header, subHeader, disclaimer, congress } = this.props;
+
         if(this.state.callMade){
           form = ( 
             < PhoneScript />
@@ -65,7 +66,7 @@ class Form extends Component {
           )
         } else {
           form = (
-            < ActionForm formSubmitted={ this.formSubmitted }/>
+            < ActionForm formSubmitted={ this.formSubmitted } header={header} subHeader={subHeader} disclaimer={disclaimer} congress={congress}/>
           )  
         }
         
