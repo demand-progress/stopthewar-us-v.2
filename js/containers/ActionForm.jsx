@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Markdown from 'react-markdown'
 import { getQueryVariables } from '../utils'
 import { CONF, URLS } from '../config'
 
@@ -100,7 +101,7 @@ class ActionForm extends Component {
         form.appendChild(input);
       });
   
-      form.submit()  
+      // form.submit()  
     }
     
     click(e){
@@ -113,7 +114,8 @@ class ActionForm extends Component {
     
     render() {
       let button = null
-      
+      const {header, subHeader, disclaimer, congress } = this.props;
+
       if(this.state.sent){
         button = (
           <button className="btn">
@@ -130,16 +132,10 @@ class ActionForm extends Component {
       
       return(
         <div className="bftn-form call-action-form">
-            <h3>Tell Congress: Stop Fueling War in Yemen</h3>
-            <br/><br/>
-            <div style={{color: 'white', lineHeight: 1.5}}>
-              <strong style={{ fontSize: "25px" }}>
-                Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.  
-              </strong>
-                <br/><br/>
-                <div>Email your lawmakers now and tell them to support the War Powers Resolution S.J.Res. 54 to end US support for the Saudi-led war in Yemen.</div>
-                <br/><br/>
-                <div>Add your name to send a message (below) to Congress:</div>
+          <Markdown source={header} />
+          <br/><br/>
+          <div style={{color: 'white', lineHeight: 1.5}}>
+            <Markdown source={subHeader} />
             </div>
             <div >
               <form>
@@ -156,15 +152,16 @@ class ActionForm extends Component {
               </div>
             </form>
            </div>
-              <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
-          <p style={{color: 'white', textAlign: 'center'}}>
+          <Markdown source={disclaimer} />
+          <Markdown source={congress} />
+          {/* <p style={{color: 'white', textAlign: 'center'}}>
               <h4>Here's the language that will be sent to Congress:</h4>
           </p>
           <p style={{color: 'white', textAlign: 'center'}}>
             <i>
               As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the bipartisan War Powers Resolution S.J.Res. 54 sponsored by Sens. Bernie Sanders (D-VT) and Mike Lee (R-UT). The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.
             </i>
-          </p>
+          </p> */}
           <hr/>
         </div>
       )
