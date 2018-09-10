@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Markdown from 'react-markdown'
 import { CONF, URLS } from '../config'
 import ajax from '../utils/ajax'
 import PhoneScriptText from './PhoneScriptText.jsx' 
@@ -52,6 +53,8 @@ class PhoneScriptForm extends Component {
 
     render() {
       let button = null
+      const {afterCallHeader, afterCallContent} = this.props;
+
       if(this.state.sent){
         button = (
           <button className="btn" >Thank You!</button>
@@ -64,15 +67,9 @@ class PhoneScriptForm extends Component {
         return (
           <div>
               <form className="bftn-form call-action-form" action="#" method="get" >
-                <h3>We're calling you now.</h3>
+                <Markdown source={afterCallHeader}/>
                 <br/><br/>
-                <div style={{color: 'white', lineHeight: 1.5}}>
-                  We will connect you to the offices of your senators. You can tell them:
-                  <PhoneScriptText />
-                  After each conversation, you can press * and we’ll connect you to the next office.
-                  <br></br>
-                  Or dial <a href="tel:+12028998938">202-899-8938</a> to connect.
-                </div>
+                <Markdown source={afterCallContent} />
                   <h4>Who did you speak with?</h4>
                   <input required="required" type="text" name="Who did you speak with?" id="who" style={{'fontSize': '24px', 'height': '50px'}} />
                   <h4>How did it go?</h4>

@@ -10,8 +10,8 @@ class Form extends Component {
         super(props);
 
         this.state = getQueryVariables();
-        this.state.submitted = false;
-        this.state.callMade = false; 
+        this.state.submitted = true;
+        this.state.callMade = true; 
         this.state.emailAction = false; 
         
         this.callMade = this.callMade.bind(this);
@@ -54,15 +54,15 @@ class Form extends Component {
     
     render() {
         let form = null;
-        const { header, subHeader, disclaimer, congress } = this.props;
+        const { header, subHeader, disclaimer, congress, afterCallContent, afterCallHeader, callHeader, callSubHeader} = this.props;
 
         if(this.state.callMade){
           form = ( 
-            < PhoneScript />
+            < PhoneScript afterCallContent={afterCallContent} afterCallHeader={afterCallHeader}/>
           )    
         } else if(this.state.emailAction || this.state.submitted) {
           form = (
-            < CallInitiate callMade={ this.callMade } callActionEmailForm= {this.state.emailAction} />
+            < CallInitiate callMade={ this.callMade } callActionEmailForm= {this.state.emailAction} callHeader={callHeader} callSubHeader={callSubHeader}/>
           )
         } else {
           form = (

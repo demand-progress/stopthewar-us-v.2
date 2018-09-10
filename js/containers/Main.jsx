@@ -6,13 +6,20 @@ import Video from './Video.jsx';
 class Main extends Component {
 
     render() {
-        const {header, subHeader, disclaimer, congress, info, tweet} = this.props;
+        const {header, subHeader, disclaimer, congress, info, tweet, callHeader, callSubHeader, afterCallHeader, afterCallContent} = this.props;
         return (
           <div className="unit">
             <div className="hero" id="bftn-action-form">
                 <div>
                     <div id="signThePetition">
-                        <Form header={header} subHeader={subHeader} disclaimer={disclaimer} congress={congress}/>
+                        <Form header={header} 
+                              subHeader={subHeader} 
+                              disclaimer={disclaimer} 
+                              congress={congress} 
+                              callHeader={callHeader} 
+                              callSubHeader={callSubHeader}
+                              afterCallContent={afterCallContent}
+                              afterCallHeader={afterCallHeader}/>
                     </div>
                 </div>
                 

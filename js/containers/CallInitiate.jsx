@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Markdown from 'react-markdown'
 import { CONF } from '../config'
 
 class CallInitiate extends Component {
@@ -50,6 +51,7 @@ class CallInitiate extends Component {
     
     render() {
       let button = null
+      const {callHeader, callSubHeader} = this.props;
       
       if(this.state.calling){
         button = (<button className="btn">CALLING...
@@ -63,7 +65,7 @@ class CallInitiate extends Component {
       let headerText = null
 
       if(this.props.callActionEmailForm){
-        headerText = (<h3>Now, could you make a call to your senators?</h3>)
+        headerText = (<Markdown source={callHeader}/>)
       } else {
         headerText = (<h3>Thanks for signing <br/>Now, could you make a call to your senators?</h3>)
       }
@@ -72,16 +74,8 @@ class CallInitiate extends Component {
           <div className="bftn-form call-action-form" id="signThePetition">
             {headerText}
             <br/><br/>
-            <div style={{color: 'white', lineHeight: 1.5}}>
-              <strong style={{ fontSize: "25px" }}>
-                Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.
-              </strong>
-              <br/><br/>
-            </div>
+            <Markdown source={callSubHeader}/>
             <article>
-              <p style={{margin:'0 0 20px 0'}}>
-                Just enter your number and click “call”.  We’ll call you, give you a script of what you can say, and connect you to your senators.
-              </p>
               <div className="phone-form">
                 <form >
                   <input style={{border:'1px solid black'}} placeholder="Your Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
