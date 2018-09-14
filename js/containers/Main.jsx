@@ -19,7 +19,8 @@ class Main extends Component {
                               callHeader={callHeader} 
                               callSubHeader={callSubHeader}
                               afterCallContent={afterCallContent}
-                              afterCallHeader={afterCallHeader}/>
+                              afterCallHeader={afterCallHeader}
+                              tweet={tweet}/>
                     </div>
                 </div>
                 
