@@ -10,8 +10,8 @@ class Form extends Component {
         super(props);
 
         this.state = getQueryVariables();
-        this.state.submitted = true;
-        this.state.callMade = true; 
+        this.state.submitted = false;
+        this.state.callMade = false; 
         this.state.emailAction = false; 
         
         this.callMade = this.callMade.bind(this);
