@@ -215,6 +215,10 @@ template {
     color: #279cff;
 }
 
+form.bftn-form.call-action-form h4, #signThePetition > div > div > div:nth-child(7) > h4 {
+    color: #279cff;
+}
+
 .bftn-homepage h4 {
     font-family: Montserrat, sans-serif;
     color: white;
