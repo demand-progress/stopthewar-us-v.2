@@ -29,7 +29,7 @@ class App extends Component {
     window.scrollTo(0, 0)
     axios({
       method: "get",
-      url: 'https://api.tipe.io/api/v1/document/5b96ac8f5e689900130b6e10',
+      url: 'https://api.tipe.io/api/v1/document/5b9c0821536f820013841535',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': tipeAuth,
@@ -41,16 +41,16 @@ class App extends Component {
       console.log(data)
         this.setState({
         textContent:{
-          homeHeader: data.blocks[0].value,
-          subHeader: data.blocks[1].value,
-          disclaimer: data.blocks[2].value,
-          congress: data.blocks[3].value,
-          info: data.blocks[4].value,
-          tweet: data.blocks[5].value,
-          callHeader: data.blocks[6].value,
-          callSubHeader: data.blocks[7].value,
-          afterCallHeader: data.blocks[8].value,
-          afterCallContent: data.blocks[9].value
+          homeHeader: data.blocks[0].value
+          // subHeader: data.blocks[1].value,
+          // disclaimer: data.blocks[2].value,
+          // congress: data.blocks[3].value,
+          // info: data.blocks[4].value,
+          // tweet: data.blocks[5].value,
+          // callHeader: data.blocks[6].value,
+          // callSubHeader: data.blocks[7].value,
+          // afterCallHeader: data.blocks[8].value,
+          // afterCallContent: data.blocks[9].value
         },
         loading: false
       }, () => {console.log(this.state)});
