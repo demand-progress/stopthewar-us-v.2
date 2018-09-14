@@ -101,7 +101,7 @@ class ActionForm extends Component {
         form.appendChild(input);
       });
   
-      // form.submit()  
+      form.submit()  
     }
     
     click(e){
