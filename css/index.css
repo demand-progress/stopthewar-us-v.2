@@ -48,10 +48,6 @@ abbr[title] {
 }
 
 b, strong {
-    font-weight: inherit;
-}
-
-b, strong {
     font-weight: bolder;
 }
 
@@ -221,9 +217,8 @@ template {
 
 .bftn-homepage h4 {
     font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    color: #279cff;
-    font-size: 24px;
+    color: white;
+    font-size: 25px;
 }
 
 .bftn-homepage div, .bftn-homepage p {
@@ -304,15 +299,13 @@ template {
     line-height: 1.5em;
 }
 
-.bftn-homepage .unit p em {
-    font-weight: bold;
-    font-style: normal;
+#signThePetition > div > div > div:nth-child(7) {
     color: #FFF;
 }
 
 .bftn-homepage .unit p a {
     text-decoration: underline;
-    color: #6388ed;
+    color: red;
 }
 
 .bftn-homepage .unit dl dt {
@@ -1757,6 +1750,10 @@ template {
     opacity: 0;
 }
 
+#bftn-action-form > div.unit > div:nth-child(2){
+    text-align: center;
+}
+
 #video {
     width: 100%;
     height: auto;
@@ -2165,9 +2162,7 @@ template {
     flex-wrap: wrap;
 }
 
-.back-to-form-link {
-    font-weight: bold;
-    color: #ff1a09 !important;
+#bftn-action-form > div.unit > div:nth-child(2) > p:nth-child(10) {
     font-size: 19px;
     text-align: center;
 }
