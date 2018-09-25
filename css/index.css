@@ -1767,6 +1767,10 @@ form.bftn-form.call-action-form h4, #signThePetition > div > div > div:nth-child
     text-align: center; 
 }
 
+#video p {
+    width: 600px;
+}
+
 @media screen and (max-width: 600px) {
     .bftn-homepage #leaderboard .leaderboard-day {
         width: 100%;
@@ -1924,6 +1928,9 @@ form.bftn-form.call-action-form h4, #signThePetition > div > div > div:nth-child
 
     .bftn-homepage #footer .built-by img {
         width: 90%;
+    }
+    #video p {
+        width: auto;
     }
 }
 
