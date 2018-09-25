@@ -67,7 +67,7 @@ class CallInitiate extends Component {
       if(this.props.callActionEmailForm){
         headerText = (<Markdown source={callHeader}/>)
       } else {
-        headerText = (<h3>Thanks for signing <br/>Now, could you make a call to your senators?</h3>)
+        headerText = (<Markdown source={callHeader}/>)
       }
 
         return (
