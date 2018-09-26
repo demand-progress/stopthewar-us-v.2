@@ -76,7 +76,7 @@ class Footer extends Component {
                                     <img src="images/twitter_white.svg" />
                                     <span>Share on twitter</span>
                                 </a>
-                                <a className="facebook" href="https://www.facebook.com/sharer.php?u=https://stopthewar.us/fb?source=fbshare" target="_blank">
+                                <a className="facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fstopthewar.us%2Ffb%3Fsource%3Dfbshare" target="_blank">
                                     <img src="images/facebook_white.svg" />
                                     <span>Share on facebook</span>
                                 </a>
