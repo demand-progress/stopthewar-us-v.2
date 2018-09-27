@@ -59,7 +59,17 @@ class Footer extends Component {
                         <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
                             {logos}
                         </div>
-                        <div>
+                        <div className="media-press-social">
+                            <div className="social-media">
+                                <a className="twitter" href={tweet} target="_blank">
+                                    <img src="images/twitter_white.svg" />
+                                    <span>Share on twitter</span>
+                                </a>
+                                <a className="facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fstopthewar.us%2Ffb%3Fsource%3Dfbshare" target="_blank">
+                                    <img src="images/facebook_white.svg" />
+                                    <span>Share on facebook</span>
+                                </a>
+                            </div> 
                             <div className="press-inquiries">
                                 <h3>For Press inquiries, please contact us at:</h3>
                                 <p>
@@ -70,17 +80,9 @@ class Footer extends Component {
                                 <p>
                                     <a href="https://demandprogress.org/privacy-policy/" target="_blank">Our privacy policy</a>
                                 </p>
-                            </div>
-                            <div className="social-media">
-                                <a className="twitter" href={tweet} target="_blank">
-                                    <img src="images/twitter_white.svg" />
-                                    <span>Share on twitter</span>
-                                </a>
-                                <a className="facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fstopthewar.us%2Ffb%3Fsource%3Dfbshare" target="_blank">
-                                    <img src="images/facebook_white.svg" />
-                                    <span>Share on facebook</span>
-                                </a>
-                            </div>
+                            </div>        
+                        </div>
+                        <div className="orgs">Defending Rights & Dissent, About Face: Veterans Against the War, CODEPINK, Common Defense, Just Foreign Policy, MPower Change, Rootsaction, The Nation, The Yemen Peace Project, Win Without War, Win Beyond War, Watchdog.net, Demand Progress Action, CREDO
                         </div>
                     </div>
                 </div>
