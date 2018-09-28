@@ -38,7 +38,6 @@ class App extends Component {
     })
     .then(response => {
       const { data } = response;
-      console.log(data)
         this.setState({
         textContent:{
           homeHeader: data.blocks[0].value,
@@ -53,7 +52,7 @@ class App extends Component {
           afterCallContent: data.blocks[9].value
         },
         loading: false
-      }, () => {console.log(this.state)});
+      });
     }).catch(console.error);
   }
 
