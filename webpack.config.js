@@ -3,7 +3,7 @@ module.exports = [{
     inline: true,
     port: 8008,
   },
-  entry: ['@babel/polyfill', ' ./js/call.jsx'],
+  entry: ['@babel/polyfill', './js/call.jsx'],
   output: {
     path: `${__dirname  }/js`,
     filename: 'bundle.js',
