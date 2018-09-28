@@ -8,7 +8,8 @@ class Footer extends Component {
         super(props)
 
         this.state = {
-            allLogos: null
+            allLogos: null,
+            dpLogoUrl: null
         }
     }
 
@@ -25,8 +26,12 @@ class Footer extends Component {
           })
           .then(response => {
             const logos = response.data.blocks
+            const dpLogoUrl = logos.filter((element) => {
+                return element.apiId === 'demandProgressAction'
+            })[0].value.url
             this.setState({
-              allLogos: logos
+              allLogos: logos,
+              dpLogoUrl
             })
           })
           .catch(console.error);
@@ -53,7 +58,7 @@ class Footer extends Component {
                 <div className="footer">
                     <div className="logos-unit">
                         <div className="built-by">
-                            <p><br/><br/>Built by:</p> <img src="images/demand-progress.png" />
+                            <p><br/><br/>Built by:</p> <img src={this.state.dpLogoUrl} />
                             {/* <p>In partnership with: </p> <img src="images/DailyKosLogo.png" /> */}
                         </div>
                         <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
