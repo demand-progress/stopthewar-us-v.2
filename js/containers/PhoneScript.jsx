@@ -14,6 +14,12 @@ class PhoneScriptForm extends Component {
          }
          
          this.onClickSendFeedback = this.onClickSendFeedback.bind(this)
+         this.clearFields = this.clearFields.bind(this)
+    }
+
+    clearFields(){
+        document.querySelector('#how').value = ''
+        document.querySelector('#who').value = ''
     }
 
     onClickSendFeedback(e) {
@@ -47,7 +53,7 @@ class PhoneScriptForm extends Component {
 
         this.setState({
             sent: true,
-        })
+        }, () => this.clearFields())
             
     }
 
