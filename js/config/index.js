@@ -1,9 +1,9 @@
 const CONF = {
-    actionKitPageShortName: 'stop-fueling-war-yemen',
-    actionKitPageId: 2172,
+    actionKitPageShortName: 'stop-fueling-war-yemen_v3',
+    actionKitPageId: 2612,
     prettyCampaignName: 'Stop Fueling War in Yemen',
     callCampaign: 'stop-fueling-war-yemen',
-    callPowerId: 16
+    callPowerId: 38
 };
 const URLS = {
     actionKit: 'https://act.demandprogress.org/act/',

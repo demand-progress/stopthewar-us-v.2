@@ -4639,11 +4639,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var CONF = {
-    actionKitPageShortName: 'stop-fueling-war-yemen',
-    actionKitPageId: 2172,
+    actionKitPageShortName: 'stop-fueling-war-yemen_v3',
+    actionKitPageId: 2612,
     prettyCampaignName: 'Stop Fueling War in Yemen',
     callCampaign: 'stop-fueling-war-yemen',
-    callPowerId: 16
+    callPowerId: 38
 };
 var URLS = {
     actionKit: 'https://act.demandprogress.org/act/',
