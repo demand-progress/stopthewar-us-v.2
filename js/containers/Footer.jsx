@@ -19,6 +19,10 @@ class Footer extends  Component {
                             {name: "World Beyond War", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/f0bec5ad-700e-4d9f-ab8c-7b0abe676ba3/World Beyond War 300x150_preview.jpeg"},
                             {name: "The Yemen Peace Project", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/7b93acd3-cc1e-4945-974b-e0454817c289/YPP-logo_preview.png"}]
         };
+        this.state.logosText = this.state.orderedLogos.map(({name, _url}) => {
+            return name;
+        });
+        this.state.logosText = this.state.logosText.join(', ');
     }
 
     componentDidMount(){
@@ -27,9 +31,10 @@ class Footer extends  Component {
     render(){
        
         let logos = null;
-        let logosText = "About Face: Veterans Against the War, Daily Kos, Defending Rights & Dissent, Demand Progress Action, Just Foreign Policy, Progressive America, Watchdog.net, Win Without War, World Beyond War, The Yemen Peace Project";
+        
         let tweet = "https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20Congress%20to%20pass%20war%20powers%20resolution%20and%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.%20www.Stopthewar.us";
         
+
         if(this.props.showLogos || !this.props.isMobile){
                 logos = this.state.orderedLogos.map(({name, url}) => {
                     return <Logo key={name} alt={name} src={url}/>
@@ -70,7 +75,7 @@ class Footer extends  Component {
                                 </p>
                             </div>        
                         </div>
-                        <div className="orgs">{logosText}</div>
+                        <div className="orgs">{this.state.logosText}</div>
                     </div>
                 </div>
             </div>);
