@@ -66,19 +66,20 @@ class PhoneScriptForm extends Component {
               <form className="bftn-form call-action-form" action="#" method="get" >
                 <h3>We're calling you now.</h3>
                 <br/><br/>
-                <div style={{color: 'white', lineHeight: 1.5}}>
-                  We will connect you to the offices of your senators. You can tell them:
-                  <PhoneScriptText />
-                  After each conversation, you can press * and we’ll connect you to the next office.
-                  <br></br>
-                  Or dial <a href="tel:+12028998938">202-899-8938</a> to connect.
+                <div>
+                  <p>We will connect you to the offices of your lawmakers. You can tell them:</p>
+                  <p>"I am a constituent. Please support the War Powers Resolution that would end American involvement in the war in Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop."</p>
+                  <p>After each conversation, you can press * and we’ll connect you to the next office.</p>
+                  <p>Or dial 202-899-8938 to connect.</p>
                 </div>
+                <div id="calling">
                   <h4>Who did you speak with?</h4>
                   <input required="required" type="text" name="Who did you speak with?" id="who" style={{'fontSize': '24px', 'height': '50px'}} />
                   <h4>How did it go?</h4>
                   <textarea required="required" type="text" name="How did it go?" id="how" style={{'fontSize': '24px', 'width': '100%', marginBottom: '10px'}} rows="4"></textarea>
-                  <br />
-                  {button}
+                </div>
+                <br />
+                {button}
               </form>
               <hr/>
             </div>

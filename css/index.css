@@ -202,6 +202,22 @@ template {
     box-sizing: border-box;
 }
 
+.media-press-social {
+    display: flex;
+    justify-content: space-between;
+}
+
+#video p {
+    width: 600px;
+}
+
+.orgs {
+    text-align: center;
+    color: #cccaea;
+    height: 100%;
+    width: 100%;
+}
+
 .bftn-homepage {
     background-color: #171629;
     color: #CCCAEA;
@@ -223,7 +239,19 @@ template {
     font-family: Montserrat, sans-serif;
     font-weight: bold;
     color: #fff;
-    font-size: 24px;
+    font-size: 25px;
+}
+
+#congress h4 {
+    font-weight: bold;
+    color: #279cff;
+    font-size: 25px;
+}
+
+#calling h4 {
+    font-weight: bold;
+    color: #279cff;
+    font-size: 25px;
 }
 
 .bftn-homepage div, .bftn-homepage p {

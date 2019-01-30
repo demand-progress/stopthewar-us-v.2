@@ -13,6 +13,7 @@ const Video = () => {
         <div id="video">
             <h4 style={{color: 'white'}}>Mark Ruffalo explains the crisis in Yemen:</h4>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/WaQewDoipQQ" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+            <p>This video was originally made to advocate for the Senate War Powers Resolution, earlier in 2018. General principles and facts remain the same.</p>
             <div id="share-button-container">
                 <div className="social-media">
                     <div className="button-share">

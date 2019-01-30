@@ -148,28 +148,24 @@ class ActionForm extends Component {
             </div>
             <div >
               <form>
-              <div className="flex">
-                <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
-                <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" />
-              </div>
-              <div className="flex">
-                <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" />
-                <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
-              </div>
-              <div className="flex">
-                {button}
-              </div>
-            </form>
-           </div>
-              <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
-          <p style={{color: 'white', textAlign: 'center'}}>
+                <div className="flex">
+                  <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
+                  <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" />
+                </div>
+                <div className="flex">
+                  <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" />
+                  <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
+                </div>
+                <div className="flex">
+                  {button}
+                </div>
+              </form>
+            </div>
+            <div><p>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</p></div>
+            <div id="congress">
               <h4>Here's the language that will be sent to Congress:</h4>
-          </p>
-          <p style={{color: 'white', textAlign: 'center'}}>
-            <i>
-              As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the War Powers Resolution to end U.S. military involvement in the Saudi-led war in Yemen.
-            </i>
-          </p>
+              <p><i>As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the War Powers Resolution introduced in the House by Rep. Ro Khanna and in the Senate by Sen. Bernie Sanders. The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.</i></p>
+            </div>
           <hr/>
         </div>
       )

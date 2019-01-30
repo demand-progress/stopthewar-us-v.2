@@ -72,16 +72,13 @@ class CallInitiate extends Component {
           <div className="bftn-form call-action-form" id="signThePetition">
             {headerText}
             <br/><br/>
-            <div style={{color: 'white', lineHeight: 1.5}}>
-              <strong style={{ fontSize: "25px" }}>
-                Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.
-              </strong>
-              <br/><br/>
-            </div>
-            <article>
-              <p style={{margin:'0 0 20px 0'}}>
+            <div>
+              <p>Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</p>
+              <p>
                 Just enter your number and click “call”.  We’ll call you, give you a script of what you can say, and connect you to your senators.
               </p>
+            </div>
+            <article>
               <div className="phone-form">
                 <form >
                   <input style={{border:'1px solid black'}} placeholder="Your Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
