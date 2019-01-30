@@ -10279,7 +10279,7 @@ var Footer = function (_Component) {
 
             var logos = null;
             var logosText = "About Face: Veterans Against the War, Daily Kos, Defending Rights & Dissent, Demand Progress Action, Just Foreign Policy, Progressive America, Watchdog.net, Win Without War, World Beyond War, The Yemen Peace Project";
-            var tweet = "https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20Congress%20to%20pass%20war%20powers%20resolution%20&%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20#Yemen.%20www.Stopthewar.us";
+            var tweet = "https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20Congress%20to%20pass%20war%20powers%20resolution%20and%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.%20www.Stopthewar.us";
 
             if (this.props.showLogos || !this.props.isMobile) {
                 logos = this.state.orderedLogos.map(function (_ref) {
@@ -10926,7 +10926,7 @@ var Video = function Video() {
                     { className: 'button-share' },
                     _react2.default.createElement(
                         'a',
-                        { className: 'twitter', href: 'https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20Congress%20to%20pass%20war%20powers%20resolution%20&%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20#Yemen.%20www.Stopthewar.us', target: '_blank' },
+                        { className: 'twitter', href: 'https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20Congress%20to%20pass%20war%20powers%20resolution%20and%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.%20www.Stopthewar.us', target: '_blank' },
                         _react2.default.createElement('img', { src: 'images/twitter_white.svg' }),
                         _react2.default.createElement(
                             'span',
