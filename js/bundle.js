@@ -10279,7 +10279,7 @@ var Footer = function (_Component) {
 
             var logos = null;
             var logosText = "About Face: Veterans Against the War, Daily Kos, Defending Rights & Dissent, Demand Progress Action, Just Foreign Policy, Progressive America, Watchdog.net, Win Without War, World Beyond War, The Yemen Peace Project";
-            var tweet = "https://twitter.com/intent/tweet?text=Tell%20your%20representative%20to%20stand%20for%20real%20%23NetNeutrality%20by%20supporting%20the%20Congressional%20Review%20Act%20resolution%20to%20save%20the%20open%20internet.%20Call%20Congress%20TODAY%3A%20https%3A%2F%2Fstopthefcc.net%2F%20";
+            var tweet = "https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20Congress%20to%20pass%20war%20powers%20resolution%20&%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20#Yemen.%20www.Stopthewar.us";
 
             if (this.props.showLogos || !this.props.isMobile) {
                 logos = this.state.orderedLogos.map(function (_ref) {
@@ -10335,7 +10335,7 @@ var Footer = function (_Component) {
                                 ),
                                 _react2.default.createElement(
                                     'a',
-                                    { className: 'facebook', href: 'https://www.facebook.com/sharer.php?u=https://www.stopthefcc.net/', target: '_blank' },
+                                    { className: 'facebook', href: 'https://www.facebook.com/sharer.php?u=https://www.stopthewar.us/', target: '_blank' },
                                     _react2.default.createElement('img', { src: 'images/facebook_white.svg' }),
                                     _react2.default.createElement(
                                         'span',
@@ -10926,7 +10926,7 @@ var Video = function Video() {
                     { className: 'button-share' },
                     _react2.default.createElement(
                         'a',
-                        { className: 'twitter', href: 'https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20your%20Sen%20to%20cosponsor%20%23SandersLeeYemen%20resolution%20%26%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.%20www.Stopthewar.us', target: '_blank' },
+                        { className: 'twitter', href: 'https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20Congress%20to%20pass%20war%20powers%20resolution%20&%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20#Yemen.%20www.Stopthewar.us', target: '_blank' },
                         _react2.default.createElement('img', { src: 'images/twitter_white.svg' }),
                         _react2.default.createElement(
                             'span',
