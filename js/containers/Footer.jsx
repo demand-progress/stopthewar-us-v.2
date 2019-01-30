@@ -11,6 +11,7 @@ class Footer extends  Component {
                             {name: "Daily Kos", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c7679f4c-3ee7-4670-84a5-b0c4f2f2e2dc/DailyKosLogo.png"},
                             {name: "Defending Rights & Dissent", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/e5d96efb-b426-41f8-be2e-8cd4292033d2/DRAD logo square.png"},
                             {name: "Demand Progress Action", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/ffb2acc8-9b36-40ef-bb9a-deb6ecb5ee55/demand-progress.png"},
+                            {name: "CODEPINK", url: "/images/CP_logo_preview(1).jpeg"},
                             {name: "Just Foreign Policy", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/7bd88f32-ac83-47d9-829d-5a68605253d4/just-foreign-policy.jpg"},
                             {name: "Progress America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/8e3e64b3-9932-4b4a-8f80-05d56c6510f7/progress-america.png"},
                             {name: "Watchdog.net", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/1f78005d-52c9-47c8-80b9-bd6734fd5fde/watchdog_small.png"},
