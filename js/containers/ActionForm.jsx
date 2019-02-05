@@ -8,11 +8,28 @@ class ActionForm extends Component {
         super(props);
         this.state = getQueryVariables();
         this.state.sent = false;
+        this.state.windowWidth = window.innerWidth;
       
-        this.onSubmit = this.onSubmit.bind(this)
-        this.click = this.click.bind(this)
+        this.onSubmit = this.onSubmit.bind(this);
+        this.click = this.click.bind(this);
+        this.handleMobile = this.handleMobile.bind(this);
     }
-    
+
+    componentWillMount() {
+      window.addEventListener('resize', this.handleMobile);
+    }
+
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.handleMobile);
+    }
+
+    /**
+     * Renders the form below header if page is on mobile.
+     */
+    handleMobile() {
+      this.setState({ windowWidth: window.innerWidth });
+    }
+
     onSubmit(evt) {
       evt.preventDefault();
       
@@ -112,7 +129,9 @@ class ActionForm extends Component {
     }
     
     render() {
-      let button = null
+      let button = null;
+      const { windowWidth } = this.state;
+      const isMobile = windowWidth <= 500;
       
       if(this.state.sent){
         button = (
@@ -134,33 +153,69 @@ class ActionForm extends Component {
             <h3>Tell Congress: Stop Fueling War in Yemen</h3>
           </div>
             <br/><br/>
-            <div style={{color: 'white', lineHeight: 1.5}}>
+
+            {isMobile ?
               <div>
-                <h4>
-                  <strong>
-                    Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.  
-                  </strong>
-                </h4>
-                  <div>Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</div>
-                  <br/>
-                  <p>Add your name to send a message (below) to Congress:</p>
+                <div >
+                  <form>
+                    <div className="flex">
+                      <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
+                      <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" />
+                    </div>
+                    <div className="flex">
+                      <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" />
+                      <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
+                    </div>
+                    <div className="flex">
+                      {button}
+                    </div>
+                  </form>
+                </div>
+                <div style={{color: 'white', lineHeight: 1.5}}>
+                  <div>
+                    <h4>
+                      <strong>
+                      Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.
+                      </strong>
+                    </h4>
+                      <div>Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</div>
+                      <br/>
+                      <p>Add your name to send a message (below) to Congress:</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div >
-              <form>
-                <div className="flex">
-                  <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
-                  <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" />
+              :
+
+              <div>
+                <div style={{color: 'white', lineHeight: 1.5}}>
+                  <div>
+                    <h4>
+                      <strong>
+                        Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.
+                      </strong>
+                    </h4>
+                      <div>Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</div>
+                      <br/>
+                      <p>Add your name to send a message (below) to Congress:</p>
+                  </div>
                 </div>
-                <div className="flex">
-                  <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" />
-                  <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
+                <div >
+                  <form>
+                    <div className="flex">
+                      <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
+                      <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" />
+                    </div>
+                    <div className="flex">
+                      <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" />
+                      <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
+                    </div>
+                    <div className="flex">
+                      {button}
+                    </div>
+                  </form>
                 </div>
-                <div className="flex">
-                  {button}
-                </div>
-              </form>
-            </div>
+              </div>
+            }
             <div><p>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</p></div>
             <div id="congress">
               <h4>Here's the language that will be sent to Congress:</h4>
