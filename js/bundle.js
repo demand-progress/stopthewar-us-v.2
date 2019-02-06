@@ -9806,13 +9806,35 @@ var ActionForm = function (_Component) {
 
     _this.state = (0, _utils.getQueryVariables)();
     _this.state.sent = false;
+    _this.state.windowWidth = window.innerWidth;
 
     _this.onSubmit = _this.onSubmit.bind(_this);
     _this.click = _this.click.bind(_this);
+    _this.handleMobile = _this.handleMobile.bind(_this);
     return _this;
   }
 
   _createClass(ActionForm, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      window.addEventListener('resize', this.handleMobile);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('resize', this.handleMobile);
+    }
+
+    /**
+     * Renders the form below header if page is on mobile.
+     */
+
+  }, {
+    key: 'handleMobile',
+    value: function handleMobile() {
+      this.setState({ windowWidth: window.innerWidth });
+    }
+  }, {
     key: 'onSubmit',
     value: function onSubmit(evt) {
       evt.preventDefault();
@@ -9916,6 +9938,9 @@ var ActionForm = function (_Component) {
     key: 'render',
     value: function render() {
       var button = null;
+      var windowWidth = this.state.windowWidth;
+
+      var isMobile = windowWidth <= 500;
 
       if (this.state.sent) {
         button = _react2.default.createElement(
@@ -9953,56 +9978,116 @@ var ActionForm = function (_Component) {
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
-        _react2.default.createElement(
+        isMobile ? _react2.default.createElement(
           'div',
-          { style: { color: 'white', lineHeight: 1.5 } },
+          null,
           _react2.default.createElement(
             'div',
             null,
             _react2.default.createElement(
-              'h4',
+              'form',
               null,
               _react2.default.createElement(
-                'strong',
-                null,
-                'Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.'
+                'div',
+                { className: 'flex' },
+                _react2.default.createElement('input', { id: 'name', type: 'text', className: 'form-input', name: 'name', placeholder: 'Your Name', pattern: '[A-Za-z \'.-]+' }),
+                _react2.default.createElement('input', { id: 'email', type: 'email', className: 'form-input', name: 'email', placeholder: 'Your Email' })
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'flex' },
+                _react2.default.createElement('input', { id: 'street', type: 'text', className: 'form-input', name: 'street', placeholder: 'Street Address' }),
+                _react2.default.createElement('input', { id: 'zip', type: 'text', className: 'form-input', name: 'zip', placeholder: 'Your Zipcode' })
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'flex' },
+                button
               )
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: { color: 'white', lineHeight: 1.5 } },
             _react2.default.createElement(
               'div',
               null,
-              'Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.'
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Add your name to send a message (below) to Congress:'
+              _react2.default.createElement(
+                'h4',
+                null,
+                _react2.default.createElement(
+                  'strong',
+                  null,
+                  'Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                'Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Add your name to send a message (below) to Congress:'
+              )
             )
           )
-        ),
-        _react2.default.createElement(
+        ) : _react2.default.createElement(
           'div',
           null,
           _react2.default.createElement(
-            'form',
+            'div',
+            { style: { color: 'white', lineHeight: 1.5 } },
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement(
+                'h4',
+                null,
+                _react2.default.createElement(
+                  'strong',
+                  null,
+                  'Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                'Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Add your name to send a message (below) to Congress:'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
             null,
             _react2.default.createElement(
-              'div',
-              { className: 'flex' },
-              _react2.default.createElement('input', { id: 'name', type: 'text', className: 'form-input', name: 'name', placeholder: 'Your Name', pattern: '[A-Za-z \'.-]+' }),
-              _react2.default.createElement('input', { id: 'email', type: 'email', className: 'form-input', name: 'email', placeholder: 'Your Email' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'flex' },
-              _react2.default.createElement('input', { id: 'street', type: 'text', className: 'form-input', name: 'street', placeholder: 'Street Address' }),
-              _react2.default.createElement('input', { id: 'zip', type: 'text', className: 'form-input', name: 'zip', placeholder: 'Your Zipcode' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'flex' },
-              button
+              'form',
+              null,
+              _react2.default.createElement(
+                'div',
+                { className: 'flex' },
+                _react2.default.createElement('input', { id: 'name', type: 'text', className: 'form-input', name: 'name', placeholder: 'Your Name', pattern: '[A-Za-z \'.-]+' }),
+                _react2.default.createElement('input', { id: 'email', type: 'email', className: 'form-input', name: 'email', placeholder: 'Your Email' })
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'flex' },
+                _react2.default.createElement('input', { id: 'street', type: 'text', className: 'form-input', name: 'street', placeholder: 'Street Address' }),
+                _react2.default.createElement('input', { id: 'zip', type: 'text', className: 'form-input', name: 'zip', placeholder: 'Your Zipcode' })
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'flex' },
+                button
+              )
             )
           )
         ),
