@@ -63,9 +63,9 @@ class CallInitiate extends Component {
       let headerText = null
 
       if(this.props.callActionEmailForm){
-        headerText = (<h3>Now, could you make a call to your senators?</h3>)
+        headerText = (<h3>Now, could you make a call to Congress?</h3>)
       } else {
-        headerText = (<h3>Thanks for signing <br/>Now, could you make a call to your senators?</h3>)
+        headerText = (<h3>Thanks for signing <br/>Now, could you make a call to Congress?</h3>)
       }
 
         return (
@@ -75,13 +75,13 @@ class CallInitiate extends Component {
             <div>
               <p>Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</p>
               <p>
-                Just enter your number and click “call”.  We’ll call you, give you a script of what you can say, and connect you to your senators.
+                Just enter your number and click “call”.  We’ll call you, give you a script of what you can say, and connect you to Congress.
               </p>
             </div>
             <article>
               <div className="phone-form">
                 <form >
-                  <input style={{border:'1px solid black'}} placeholder="Your Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
+                  <input style={{border:'1px solid black'}} placeholder="Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
                   {button}
                 </form>
                 <div className="privacy" style={{fontSize:"12px", fontFamily:"inherit", fontStyle:"italic", textAlign:"center", padding:"10px 0 20px", lineHeight:"1.5"}}>

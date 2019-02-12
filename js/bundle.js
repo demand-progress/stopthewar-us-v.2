@@ -10234,7 +10234,7 @@ var CallInitiate = function (_Component) {
         headerText = _react2.default.createElement(
           'h3',
           null,
-          'Now, could you make a call to your senators?'
+          'Now, could you make a call to Congress?'
         );
       } else {
         headerText = _react2.default.createElement(
@@ -10242,7 +10242,7 @@ var CallInitiate = function (_Component) {
           null,
           'Thanks for signing ',
           _react2.default.createElement('br', null),
-          'Now, could you make a call to your senators?'
+          'Now, could you make a call to Congress?'
         );
       }
 
@@ -10263,7 +10263,7 @@ var CallInitiate = function (_Component) {
           _react2.default.createElement(
             'p',
             null,
-            'Just enter your number and click \u201Ccall\u201D.  We\u2019ll call you, give you a script of what you can say, and connect you to your senators.'
+            'Just enter your number and click \u201Ccall\u201D.  We\u2019ll call you, give you a script of what you can say, and connect you to Congress.'
           )
         ),
         _react2.default.createElement(
@@ -10275,7 +10275,7 @@ var CallInitiate = function (_Component) {
             _react2.default.createElement(
               'form',
               null,
-              _react2.default.createElement('input', { style: { border: '1px solid black' }, placeholder: 'Your Phone Number', id: 'fieldPhone', ref: 'field-phone', className: 'phone', name: 'phone', autoComplete: 'on', pattern: '[\\d\\(\\)\\-\\+ ]*', autoFocus: true }),
+              _react2.default.createElement('input', { style: { border: '1px solid black' }, placeholder: 'Phone Number', id: 'fieldPhone', ref: 'field-phone', className: 'phone', name: 'phone', autoComplete: 'on', pattern: '[\\d\\(\\)\\-\\+ ]*', autoFocus: true }),
               button
             ),
             _react2.default.createElement(
