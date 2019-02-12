@@ -10752,7 +10752,7 @@ var Main = function (_Component) {
                                 _react2.default.createElement(
                                     'a',
                                     { className: 'back-to-form-link', href: '#signThePetition' },
-                                    'Our public dollars should not be funding Saudi and UAE war crimes in Yemen. Will you sign our petition and call your senators today to urge them to support the Sanders-Lee resolution?'
+                                    'Our public dollars should not be funding Saudi and UAE war crimes in Yemen. Will you sign our petition and call Congress today to urge them to support the Sanders-Lee resolution?'
                                 )
                             )
                         )

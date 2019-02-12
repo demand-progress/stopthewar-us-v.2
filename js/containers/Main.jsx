@@ -32,7 +32,7 @@ class Main extends Component {
                         <br/><br/>
                         America’s unconstitutional war in Yemen has never been authorized by Congress. Congress has the power to use a resolution to end U.S. military involvement in the Saudi-led coalition’s war in Yemen. It would end U.S. refueling of and intelligence-sharing to coalition warplanes conducting aerial bombings in Yemen. It invokes the War Powers Resolution of 1973 that was passed in the wake of Vietnam to empower Congress as the sole body that can declare war. This legislation is our best chance to end America’s role in this unconstitutional war and push for peace, which is the only significant way to relieve the suffering of the Yemeni people.
                         <br/><br/>
-                        <strong><a className="back-to-form-link" href="#signThePetition">Our public dollars should not be funding Saudi and UAE war crimes in Yemen. Will you sign our petition and call your senators today to urge them to support the Sanders-Lee resolution?</a></strong>
+                        <strong><a className="back-to-form-link" href="#signThePetition">Our public dollars should not be funding Saudi and UAE war crimes in Yemen. Will you sign our petition and call Congress today to urge them to support the Sanders-Lee resolution?</a></strong>
                     </p>
                 </div>
             </div>
